@@ -22,4 +22,10 @@ app.use(express.static('public'));
 
 app.use(cookieParser());
 
+// Routes
+import userRouter from "./routes/user.router.js";
+
+// Use Routes
+app.use("/api/v1/users", userRouter);
+
 export { app };
